@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Define an array of links
+        var links = [
+            "https://forms.gle/YVZ6UUry8VDSGVbT6",
+            "https://forms.gle/sFttNo9dCkY9Tcof6",
+            "https://forms.gle/gmYcDok4vt6Z61Ud6",
+            "https://forms.gle/nekpyfp71EAbNKRz5"
+        ];
+
+        // Function to navigate to a random link from the array
+        function navigateToRandomLink() {
+            var randomIndex = Math.floor(Math.random() * links.length);
+            var randomLink = links[randomIndex];
+            window.location.href = randomLink;
+        }
+    </script>
+</head>
+<body>
+    <p>Click the text below to navigate to a random link:</p>
+    <a id="myLink" href="javascript:void(0)" onclick="navigateToRandomLink()">Click for study</a>
+</body>
+</html>
