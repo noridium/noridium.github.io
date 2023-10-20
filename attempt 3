@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Define an array of links
+        var links = [
+            "https://forms.gle/YVZ6UUry8VDSGVbT6",
+            "https://forms.gle/sFttNo9dCkY9Tcof6",
+            "https://forms.gle/gmYcDok4vt6Z61Ud6",
+            "https://forms.gle/nekpyfp71EAbNKRz5"
+        ];
+
+        // Function to get a random link from the array
+        function getRandomLink() {
+            var randomIndex = Math.floor(Math.random() * links.length);
+            return links[randomIndex];
+        }
+
+        // Set the initial link to a random link
+        var link = document.getElementById("myLink");
+        link.setAttribute("href", getRandomLink());
+    </script>
+</head>
+<body>
+    <a id="myLink" href="https://www.google.com">Click me</a>
+</body>
+</html>
