@@ -14,12 +14,15 @@
             "https://forms.gle/nekpyfp71EAbNKRz5"
         ];
 
-        // Function to navigate to a random link from the array
-        function navigateToRandomLink() {
-            var randomIndex = Math.floor(Math.random() * links.length);
-            var randomLink = links[randomIndex];
-            window.location.href = randomLink;
-        }
+       // Function to shuffle array and navigate to the first link
+function navigateToRandomLink() {
+    for (let i = links.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [links[i], links[j]] = [links[j], links[i]];
+    }
+
+    window.location.href = links[0];
+}
     </script>
 </head>
 <body>
